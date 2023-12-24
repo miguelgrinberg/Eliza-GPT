@@ -1,0 +1,129 @@
+{
+    "substitutions":
+    {
+        "you": "I",
+        "i": "you",
+        "am": "are",
+        "are": "am",
+        "your": "my",
+        "my": "your",
+        "were": "was",
+        "me": "you",
+        "you're": "i am",
+        "i'm": "you are",
+        "myself": "yourself",
+        "yourself": "myself",
+        "mom": "mother",
+        "mum": "mother",
+        "dad": "father",
+        "dont": "don't",
+        "cant": "can't",
+        "cannot": "can't",
+        "wont": "won't",
+        "how": "what",
+        "when": "what",
+        "certainly": "yes",
+        "yeah": "yes",
+        "yea": "yes",
+        "ye": "yes",
+        "hello": "hi",
+        "hey": "hi",
+        "greetings": "hi",
+        "maybe": "perhaps",
+        "machine": "computer",
+        "machines": "computer",
+        "computers": "computer",
+        "recollect": "remember",
+        "recall": "remember",
+        "forget": "forgot",
+        "dreamed": "dreamt",
+        "dreams": "dream",
+        "everybody": "everyone",
+        "nobody": "everyone",
+        "noone": "everyone",
+        "same": "like",
+        "identical": "like",
+        "equivalent": "like",
+        "remind": "like",
+        "alike": "like",
+        "apologise": "sorry",
+        "apologize": "sorry"
+    },
+
+    "tags":
+    {
+        "belief":
+        [
+            "belief",
+            "feel",
+            "think",
+            "believe"
+        ],
+        "family":
+        [
+            "family",
+            "mother",
+            "father",
+            "sister",
+            "brother",
+            "wife",
+            "husband",
+            "children",
+            "child",
+            "aunt",
+            "uncle"
+        ],
+        "desire":
+        [
+            "desire",
+            "want",
+            "need"
+        ],
+        "everyone":
+        [
+            "everyone",
+            "everybody",
+            "nobody",
+            "noone",
+            "no one"
+        ],
+        "happy":
+        [
+            "happy",
+            "elated",
+            "glad",
+            "better"
+        ],
+        "sad":
+        [
+            "sad",
+            "unhappy",
+            "depressed",
+            "sick"
+        ],
+        "am":
+        [
+            "am",
+            "is",
+            "are",
+            "was"
+        ]
+    },
+    "memory_inputs": 
+    [
+        "your"
+    ],
+    "exit_inputs": 
+    [
+        "bye",
+        "goodbye",
+        "done",
+        "quit",
+        "exit",
+        "bye.",
+        "goodbye.",
+        "done.",
+        "quit.",
+        "exit."
+    ]
+}

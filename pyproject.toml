@@ -1,0 +1,48 @@
+[project]
+name = "Eliza-GPT"
+version = "0.0.0.dev0"
+authors = [
+    { name = "Miguel Grinberg", email = "miguel.grinberg@gmail.com" },
+]
+description = "Eliza, the chatbot from the 1960s, running on OpenAI's Chat Completions API"
+classifiers = [
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "microdot",
+]
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.urls]
+Homepage = "https://github.com/miguelgrinberg/eliza-gpt"
+"Bug Tracker" = "https://github.com/miguelgrinberg/eliza-gpt/issues"
+
+[project.scripts]
+eliza-gpt = "eliza_gpt.cli:main"
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = [
+    "src",
+]
+namespaces = false
+
+[build-system]
+requires = [
+    "setuptools>=61.2",
+]
+build-backend = "setuptools.build_meta"
