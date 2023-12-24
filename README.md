@@ -51,15 +51,15 @@ The [examples](https://github.com/miguelgrinberg/Eliza-GPT/tree/main/examples) d
 
 ## Implementation Details
 
-Eliza-GPT implements a portion of the OpenAI Chat Completions API, ignoring anything that isn't useful.
+Eliza-GPT implements a portion of the OpenAI Chat Completions API, ignoring anything that isn't useful. In particular, at this time only the `/v1/chat/completions` endpoint is implemented. Any other endpoint from the OpenAI API will return a 404 error to the caller.
 
-The following aspects of the API are currently supported:
+The following aspects of the Chat Completions endpoint are currently supported:
 
 - The chat history given in the `messages` argument. Only messages with role `user` are used to "prime" Eliza so that it provides a reasonable response.
 - The `stream` argument, which determines if the response should be given in a single JSON object or as a stream of Server-Sent Events.
 - The `seed` option, which makes it possible to have deterministic responses.
 
-These are not used or implemented:
+These are not used or not implemented:
 
 - Any messages in the chat history that have a role different than `user`.
 - Model names. Eliza-GPT returns the requested model name in the response.
