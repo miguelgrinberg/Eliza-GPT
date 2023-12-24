@@ -1,5 +1,7 @@
 # Eliza-GPT
 
+[![Build status](https://github.com/miguelgrinberg/eliza-gpt/workflows/build/badge.svg)](https://github.com/miguelgrinberg/eliza-gpt/actions) [![codecov](https://codecov.io/gh/miguelgrinberg/eliza-gpt/branch/main/graph/badge.svg)](https://codecov.io/gh/miguelgrinberg/eliza-gpt)
+
 [Eliza](https://en.wikipedia.org/wiki/ELIZA), the classic chatbot from the 1960s, running on OpenAI's [Chat Completions API](https://platform.openai.com/docs/api-reference/chat).
 
 ## Why?
@@ -21,21 +23,27 @@ Once installed, run it to start it as a local service on your computer:
     Eliza-GPT is running!
     Set base_url="http://127.0.0.1:5005/v1" in your OpenAI client to connect.
 
+Finally, if you have a custom client that talks directly to the chat completions endpoint, configure `http://127.0.0.1:5005/v1` as your endpoint.
+
+### Configuration
+
 Run with `--help` to learn about configuration options, which include:
 
 - Setting the listening IP address and port
 - Adding an API key for authentication
 - Changing the (simulated) response times, or removing all artificial delays.
 
+### Connecting With a Chat Client
+
 If you are using the official Python client from OpenAI, add the `base_url` option to it as follows:
 
-    openai_client = OpenAI(base_url='http://localhost:5005/v1')
+    openai_client = OpenAI(base_url='http://127.0.0.1:5005/v1')
 
 If you use Langchain, then use the following to connect to Eliza-GPT:
 
-    chat = ChatOpenAI(base_url='http://localhost:5005/v1')
+    chat = ChatOpenAI(base_url='http://127.0.0.1:5005/v1')
 
-Eliza-GPT supports both the direct and streaming interfaces.
+Eliza-GPT supports both the direct and streaming interfaces offered by these clients.
 
 ## Examples
 

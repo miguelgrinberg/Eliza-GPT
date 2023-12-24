@@ -1,0 +1,4 @@
+include README.md LICENSE tox.ini
+recursive-include src/eliza_gpt/eliza_py *
+recursive-include tests *
+exclude **/*.pyc
