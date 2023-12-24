@@ -1,6 +1,10 @@
+import os
 from openai import OpenAI
 
-openai_client = OpenAI(base_url='http://localhost:5005/v1')
+openai_client = OpenAI(
+    base_url='http://localhost:5005/v1',
+    api_key=os.environ.get('OPENAI_API_KEY', 'x'),
+)
 messages = [
     {"role": "system", "content": "You are a helpful assistant."},
 ]

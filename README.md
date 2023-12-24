@@ -27,9 +27,9 @@ Once installed, run it to start it as a local service on your computer:
 
 Run with `--help` to learn about configuration options, which include:
 
-- Setting the listening IP address and port
-- Adding an API key for authentication
-- Changing the (simulated) response times, or removing all artificial delays.
+- Setting the listening IP address and port.
+- Adding an API key for authentication.
+- Changing the (simulated) response times. Set to 0 to have near immediate responses.
 
 ### Connecting With a Chat Client
 
@@ -69,3 +69,7 @@ These are not used or implemented:
 - The `stop` argument.
 - Anything related to tools or functions that the model may call.
 - Anything related to log probabilities.
+
+## Credits
+
+The Eliza chatbot used in this project is called [Eliza.py](https://github.com/rdimaio/eliza-py) and was created by Riccardo Di Maio.

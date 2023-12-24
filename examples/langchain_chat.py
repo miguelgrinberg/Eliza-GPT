@@ -1,7 +1,12 @@
+import os
 from langchain.chat_models import ChatOpenAI
 from langchain.schema import HumanMessage, SystemMessage, AIMessage
 
-chat = ChatOpenAI(model="gpt-3.5-turbo", base_url='http://localhost:5005/v1')
+chat = ChatOpenAI(
+    model="gpt-3.5-turbo",
+    base_url='http://localhost:5005/v1',
+    api_key=os.environ.get('OPENAI_API_KEY', 'x'),
+)
 messages = [
     SystemMessage(content="You are a helpful assistant."),
 ]
