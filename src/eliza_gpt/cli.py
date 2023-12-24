@@ -2,7 +2,7 @@ import argparse
 from eliza_gpt.api import ElizaGPT
 
 
-def main():
+def main():  # pragma: no cover
     parser = argparse.ArgumentParser()
     parser.add_argument(
         '--host', type=str, default='127.0.0.1',

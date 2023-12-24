@@ -1,6 +1,7 @@
 import json
 import pytest
-from eliza_gpt.api import ElizaGPT
+from eliza_gpt import ElizaGPT
+from eliza_gpt.cli import main  # noqa: F401
 from microdot.test_client import TestClient
 
 

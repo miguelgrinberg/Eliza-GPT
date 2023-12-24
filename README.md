@@ -23,8 +23,6 @@ Once installed, run it to start it as a local service on your computer:
     Eliza-GPT is running!
     Set base_url="http://127.0.0.1:5005/v1" in your OpenAI client to connect.
 
-Finally, if you have a custom client that talks directly to the chat completions endpoint, configure `http://127.0.0.1:5005/v1` as your endpoint.
-
 ### Configuration
 
 Run with `--help` to learn about configuration options, which include:
@@ -43,7 +41,9 @@ If you use Langchain, then use the following to connect to Eliza-GPT:
 
     chat = ChatOpenAI(base_url='http://127.0.0.1:5005/v1')
 
-Eliza-GPT supports both the direct and streaming interfaces offered by these clients.
+If you have a custom client that talks directly to the chat completions endpoint, configure `http://127.0.0.1:5005/v1` as your endpoint.
+
+Eliza-GPT supports both the direct and streaming interfaces.
 
 ## Examples
 
