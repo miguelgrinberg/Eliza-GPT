@@ -1,1 +1,1 @@
-from eliza_gpt.api import ElizaGPT
+from eliza_gpt.api import ElizaGPT  # noqa: F401
