@@ -1,6 +1,6 @@
 [project]
 name = "eliza-gpt"
-version = "0.1.2.dev0"
+version = "0.2.0"
 authors = [
     { name = "Miguel Grinberg", email = "miguel.grinberg@gmail.com" },
 ]
