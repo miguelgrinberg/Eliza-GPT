@@ -1,9 +1,9 @@
 import asyncio
-import json
 import random
 import time
 import uuid
 from microdot import Microdot
+from microdot.sse import sse_response
 from eliza_py.utils.startup import setup as eliza_setup
 from eliza_py.utils.response import generate_response as run_eliza
 from eliza_py.eliza import GENERAL_SCRIPT_PATH, SCRIPT_PATH
@@ -70,14 +70,14 @@ async def chat_completions(request):
             ]
         }
 
-    async def stream_response():
+    async def send_chunks(request, sse):
         chunks = response.split(' ')
         for i in range(len(chunks)):
             last_chunk = i == len(chunks) - 1
             if request.app.avg_response_time:  # pragma: no branch
                 await asyncio.sleep(
                     random.random() * request.app.avg_response_time * 2 / 10)
-            yield b'data: ' + json.dumps({
+            await sse.send({
                 'id': chat_id,
                 'created': created,
                 'model': model,
@@ -93,7 +93,7 @@ async def chat_completions(request):
                         'finish_reason': 'stop' if last_chunk else None,
                     },
                 ],
-            }).encode() + b'\n\n'
-        yield b'data: [DONE]\n\n'
+            })
+        await sse.send('[DONE]')
 
-    return stream_response(), 200, {'Content-Type': 'text/event-stream'}
+    return sse_response(request, send_chunks)
